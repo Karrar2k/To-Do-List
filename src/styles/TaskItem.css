@@ -1,0 +1,163 @@
+/* Task Item Container */
+.task-item {
+  border: 2px solid var(--main-accent);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: var(--house-bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Task Details */
+.task-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  margin-bottom: 10px;
+}
+
+/* Task Name */
+.task-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-accent);
+  word-break: break-word;
+}
+
+/* Task Description */
+.task-description {
+  color: var(--main-accent);
+  font-size: smaller;
+  word-break: break-word;
+}
+
+/* Priority Colors */
+.priority-high {
+  color: #ff0000;
+  font-size: smaller;
+}
+
+.priority-medium {
+  color: #ff9b3e;
+  font-size: smaller;
+}
+
+.priority-low {
+  color: #33ee3d;
+  font-size: smaller;
+}
+
+/* Typing Cursor */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: var(--main-accent);
+  animation: blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Edit Button Wiggle Animation */
+.edit-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.edit-button:hover {
+  animation: wiggle 0.3s infinite alternate;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+/* Done Button */
+.done-button {
+  align-self: flex-end; /* Align to bottom-right */
+  background-color: var(--main-accent);
+  color: var(--house-bg);
+  border: 2px solid var(--main-accent);
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.done-button:hover {
+  background-color: var(--house-bg);
+  color: var(--main-accent);
+}
+
+/* Task Deadline */
+.task-deadline {
+  color: var(--main-accent);
+  font-size: smaller;
+}
+
+/* Modal inside Task Item */
+.confirmation-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.confirmation-content {
+  background-color: var(--house-bg);
+  border: 2px solid var(--main-accent);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  color: var(--main-accent);
+}
+
+/* Confirmation Buttons */
+.confirm-button,
+.cancel-button {
+  background-color: var(--main-accent);
+  color: var(--house-bg);
+  border: 2px solid var(--main-accent);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.confirm-button:hover,
+.cancel-button:hover {
+  background-color: var(--house-bg);
+  color: var(--main-accent);
+}
+
+/* Blur Effect for Task Details */
+.blurred {
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+}

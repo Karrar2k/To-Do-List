@@ -1,0 +1,62 @@
+/* House Container */
+.house {
+  background-color: var(--house-bg);
+  border: 5px solid var(--main-accent);
+  border-radius: 24px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  height: clamp(70vh, 85%, 90vh);
+  max-width: 30vw;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .house {
+    max-width: 70vw;
+    height: clamp(60vh, 75%, 85vh);
+  }
+}
+
+@media (orientation: portrait) {
+  .house {
+    max-width: 85vw;
+    height: clamp(70vh, 85%, 95vh);
+  }
+}
+
+/* Title inside the house */
+.house-title {
+  font-family: var(--font-family);
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--main-accent);
+  text-align: center;
+  margin: 10px 0 20px;
+  transition: color 0.3s ease, font-family 0.3s ease;
+}
+
+/* House Credit Section */
+.house-credit {
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  color: var(--main-accent);
+  text-align: center;
+  margin-top: auto;
+  transition: color 0.3s ease, font-family 0.3s ease;
+}
+
+.credit-link {
+  color: var(--main-accent);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.credit-link:hover {
+  color: var(--task-list-bg);
+}

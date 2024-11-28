@@ -1,0 +1,189 @@
+/* Task List Container */
+.task-list {
+  background-color: var(--tasklist-bg);
+  border: 2px solid var(--main-accent);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 auto;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+  height: clamp(30vh, 50%, 60vh);
+  max-height: 60%;
+  width: 95%;
+  max-width: 650px;
+  overflow-y: auto;
+  position: relative;
+}
+/* Empty State Message */
+.empty-state {
+  font-size: 2rem;
+  color: var(--main-accent);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Scrollbar Customization */
+.task-list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-accent) transparent;
+  padding-right: 10px;
+  position: relative;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 8px; /* Slim scrollbar width */
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: var(--main-accent);
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--slct-accent);
+}
+
+.task-list::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Tabs Container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+/* Sort Container */
+.sort-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* "Sort by:" Title */
+.sort-title {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: var(--main-accent);
+  margin: 0;
+}
+
+/* Radio Buttons for Sorting */
+.sort-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.sort-options label {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: var(--main-accent);
+  cursor: pointer;
+}
+
+.sort-options input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: var(--main-accent);
+}
+
+/* Add Task Button */
+.add-task-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.add-task-button {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--house-bg);
+  background-color: var(--main-accent);
+  border: 2px solid var(--main-accent);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 340px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-task-button:hover {
+  background-color: var(--house-bg);
+  color: var(--main-accent);
+}
+
+/* Empty State Message */
+.empty-state {
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+  color: var(--main-accent);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Task Counter */
+.task-counter {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: var(--main-accent);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Tab Button */
+.tab-button {
+  position: relative;
+  flex: 1;
+  max-width: 150px;
+  text-align: center;
+  background-color: var(--main-accent);
+  color: var(--house-bg);
+  border: 2px solid var(--main-accent);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 20px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.tab-button:hover{
+  background-color:var(--house-bg);
+  color: var(--main-accent);
+}
+
+.tab-button.active{
+  background-color: var(--slct-accent);
+  color: var(--house-bg);
+}
+
+/* Exclamation Mark */
+.exclamation {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  font-size: 18px;
+  color: #ff0000;
+  animation: bounce 0.8s infinite;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

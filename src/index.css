@@ -1,0 +1,79 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Iceberg&family=Jaro:opsz@6..72&family=Koulen&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Root Variables for Themes */
+:root {
+  --main-bg: #53AAFF;
+  --house-bg: #A8D4FF;
+  --main-accent: #FF4D00;
+  --tasklist-bg: #94BBE1;
+  --font-family: 'Iceberg', sans-serif;
+  --slct-accent: #F98655;
+}
+
+/* Body Styling */
+body {
+  background-color: var(--main-bg);
+  font-family: var(--font-family);
+  transition: background-color 0.3s ease, font-family 0.3s ease;
+}
+
+/* Task List Styling */
+.task-list {
+  background-color: var(--task-list-bg);
+  border-color: var(--main-accent);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* House Styling */
+.house {
+  background-color: var(--house-bg);
+  border-color: var(--main-accent);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Button Styling */
+button {
+  background-color: var(--main-accent);
+  color: var(--house-bg);
+  font-family: var(--font-family);
+  transition: background-color 0.3s ease, color 0.3s ease, font-family 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--task-list-bg);
+  color: var(--main-bg);
+}
+
+/* Box Sizing for Consistency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Flex Center Helper */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries for Scaling */
+@media (max-width: 1080px) {
+  body {
+    zoom: 0.9;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    zoom: 0.8;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    zoom: 0.7;
+  }
+}
